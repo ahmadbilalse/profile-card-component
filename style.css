@@ -1,0 +1,137 @@
+/* =========================================== */
+
+:root {
+	--font-1: 'Kumbh Sans', sans-serif;
+	--color-primary-1: hsl(185, 75%, 39%);
+	--color-primary-2: hsl(229, 23%, 23%);
+	--color-primary-3: hsl(227, 10%, 46%);
+	--color-neutral-1: hsl(0, 0%, 59%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	font-family: var(--font-1);
+	font-size: 18px;
+	color: var(--color-primary-2);
+}
+
+.bg-container {
+	background-color: var(--color-primary-1);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.bg-container>img {
+	position: absolute;
+}
+
+.bg-container>img:first-child {
+	right: 51%;
+	bottom: 40%;
+}
+
+.bg-container>img:last-child {
+	left: 44%;
+	top: 44%;
+}
+
+.card {
+	background-color: #fff;
+	width: 100%;
+	text-align: center;
+	border-radius: 1rem;
+	overflow: hidden;
+	max-width: 350px;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.158);
+}
+
+.card__header {
+	height: 13rem;
+	background-image: url('./images/bg-pattern-card.svg');
+	background-size: 100% 140px;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.card__content {
+	position: relative;
+}
+
+.card__profile-image {
+	border-radius: 100%;
+	padding: 0.3rem;
+	background-color: rgb(255, 255, 255);
+	height: 7rem;
+	position: relative;
+	bottom: -5.5rem;
+}
+
+.card__personal-info {
+	padding: 1.5rem 0;
+}
+
+.card__name {
+	font-weight: 700;
+	padding-bottom: 0.7rem;
+}
+
+.card__age {
+	color: var(--color-primary-3);
+	font-weight: 400;
+	display: inline-block;
+	padding-left: 0.3rem;
+}
+
+.card__location {
+	font-size: calc((7 / 9) * 1em);
+	color: var(--color-neutral-1);
+}
+
+.stats {
+	border-top: 1px solid rgba(197, 197, 197, 0.603);
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1.5rem 0;
+}
+
+.stats__number {
+	font-weight: 700;
+	line-height: 2;
+}
+
+.stats__metric {
+	font-size: 0.6em;
+	letter-spacing: 0.15em;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding: 1rem;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1000px) {
+	.bg-container>img:last-child {
+		left: 50%;
+		top: 52%;
+	}
+}
